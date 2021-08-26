@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta content="charset" charset="utf-8">
+
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Index page</title>
+
+</head>
+
+<body>
+    <div class="main-content">
+
+        {{>header}}
+        <p>Use this site to get your weather</p>
+        <form>
+            <input required placeholder="Location" />
+            <button>Search</button>
+        </form>
+        <p id="p-first"></p>
+        <p id="p-second"></p>
+    </div>
+
+
+    {{>footer}}
+    <script src="script.js"></script>
+</body>
+
+</html>
