@@ -14,7 +14,7 @@ const partialpath = path.join(__dirname, '../templates/partials');//partials ref
 //required:intializing function
 const app = express()
 /////////////////////////////
-
+const port=process.env.PORT||3000//for heroku since it wont work on port 3000
 
 app.set('view engine', 'hbs')//setting view engine  same as it  no change  
 app.set('views', viewspath)//only when views path has changeed
@@ -85,6 +85,6 @@ app.get('*', (req, res) => {//wildcard refers to all routes that doesnot exist
 
 
 //starting server
-app.listen(3000, () => {
-    console.log('server is up on port 3000')
+app.listen(port, () => {
+    console.log('server is up on port '+port)
 })
